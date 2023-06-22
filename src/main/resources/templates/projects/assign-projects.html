@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Assign Project</title>
+  <link rel="stylesheet" type="text/css" href="/styles/fragments.css">
+  <link rel="stylesheet" type="text/css" href="/styles/universal.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+<div th:replace="fragments :: navbar"></div>
+
+<p class="alert alert-danger mt-4" th:if="${error}">
+  <strong>Error:</strong> <span th:text="${error}"></span>
+</p>
+
+
+<div class="mx-auto w-50" >
+  <div th:if="${projectDTO}">
+    <div th:if="${employeeDTO}">
+      <p class="alert alert-success">
+        Project: <span th:text="${projectDTO.name}"></span> was assigned to
+        <span th:text="${employeeDTO.lastname + ' ' + employeeDTO.firstname}"></span> successfully.
+      </p>
+    </div>
+  </div>
+
+  <div th:if="${employeeRemovedDTO !=null and projectRemovedDTO != null}">
+    <p class="alert alert-success">
+      <span th:text="${'Employee' + employeeRemovedDTO.firstname + employeeRemovedDTO.lastname + ' was removed from project: '
+         + projectRemovedDTO.name + 'successfully'}"></span> .
+    </p>
+  </div>
+
+  <p class="alert alert-danger mt-4 w-50 mx-auto" th:if="${invalidAssigment}">
+    <strong>Error:</strong> <span th:text="${invalidAssigment}"></span>
+  </p>
+</div>
+
+<div class="container">
+  <table class="table table-bordered  table-striped">
+    <thead class="table-striped">
+      <tr>
+        <th>Employee's Name</th>
+        <th>Current: Employer's name</th>
+        <th>Current projects employee is assigned</th>
+        <th>Employer's projects not assigned yet</th>
+      </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each="employee : ${employeeList}">
+      <td th:text="${employee.getFirstname + '  '+ employee.getLastname}" />
+      <td  th:text="${employee.employer != null ?  employee.employer.name : 'Unemployed'}" />
+      <td>
+        <ul>
+          <li th:if="${employee.employer != null and project?.getAllEmployees()?.contains(employee)}" th:each="project : ${employee.employer?.getAllProjects()}">
+            <th:block th:if="${project.getAllEmployees().contains(employee)}">
+              <span th:text="${project.name}"></span>
+              <form th:action="@{/projects/unassign}" method="post" class="d-inline-block">
+                <input type="hidden" name="employeeId" th:value="${employee.id}" />
+                <input type="hidden" name="employerId" th:value="${employee.employer.id}" />
+                <input type="hidden" name="projectId" th:value="${project.id}" />
+                <button type="submit" class="btn btn-warning btn-sm mt-3 ml-2">
+                  <i class="bi bi-plus-circle "></i> Release employee from this project</button>
+              </form>
+            </th:block>
+          </li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li th:if="${employee.employer != null}" th:each="project : ${employee.employer?.getAllProjects()}" th:unless="${employee.getAllProjects().contains(project)}" class="mb-3">
+            <span th:text="${project.name}" class="mb-3"></span>
+            <form th:action="@{/projects/assign}" method="post" class="d-inline-block">
+              <input type="hidden" name="employeeId" th:value="${employee.id}" />
+              <input type="hidden" name="employerId" th:value="${employee.employer.id}" />
+              <input type="hidden" name="projectId" th:value="${project.id}" />
+              <button type="submit" class="btn btn-warning btn-sm ml-2">
+                <i class="bi bi-plus-circle "> Assign this Project to employee</i>
+              </button>
+            </form>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<div th:replace="fragments :: footer"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" type="text/css" href="/styles/fragments.css">
+  <link rel="stylesheet" type="text/css" href="/styles/universal.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <title>Create Project</title>
+</head>
+<body>
+<div th:replace="fragments :: navbar"></div>
+
+<div  th:if="${employers.size() == 0}">
+  <div class="alert alert-danger w-50 mx-auto">
+    <p>A project cannot be created because there are currently no employers available to own it</p>
+  </div>
+
+  <div class="alert alert-info w-50 mx-auto">
+    <p>Please create an Employer first  and return!</p>
+    <p>To add an Employer click <a th:href="@{/employers/addEmployer}">Here</a></p>
+  </div>
+</div>
+
+<p class="alert alert-danger mt-4 mx-auto w-25" th:if="${errorMessage}">
+  <strong>Error:</strong> <span th:text="${errorMessage}"></span>
+</p>
+
+<div th:if="${employers.size() != 0}">
+
+  <div class="container">
+    <h2>Project insertion</h2>
+    <hr>
+    <p class="h4 mb-4">Save a Project</p>
+
+    <form th:action="@{/projects/create}" th:object="${projectForm}" method="post" class="col-md-6 mx-auto">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" th:field="*{name}" class="form-control" required/>
+        <p class="alert alert-danger" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" th:field="*{description}" class="form-control" required></textarea>
+        <p class="alert alert-danger" th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></p>
+      </div>
+
+      <div class="form-group">
+        <label for="employer">Employer:</label>
+        <select id="employer" name="employer" th:field="*{employer}" required class="form-control">
+          <option value="">-- Select Employer --</option>
+          <option th:each="employer : ${employers}" th:value="${employer.id}" th:text="${employer.name}"></option>
+        </select>
+        <p class="alert alert-danger" th:if="${#fields.hasErrors('employer')}" th:errors="*{employer}"></p>
+      </div>
+
+      <div class="form-group">
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" name="startDate" th:field="*{startDate}" class="form-control" required>
+        <p class="alert alert-danger" th:if="${#fields.hasErrors('startDate')}" th:errors="*{startDate}"></p>
+      </div>
+
+      <div class="form-group">
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate" name="endDate" th:field="*{endDate}"  class="form-control" required>
+        <p class="alert alert-danger" th:if="${#fields.hasErrors('endDate')}" th:errors="*{endDate}"></p>
+      </div>
+
+      <div class="mb-3 mt-3 ">
+        <label for="status">Status:</label>
+        <select required name="status" th:field="*{status}" id="status">
+          <option value="ACTIVE">Active</option>
+          <option value="INACTIVE">Inactive</option>
+        </select>
+        <p class="alert alert-danger" th:if="${#fields.hasErrors('status')}" th:errors="*{status}"></p>
+      </div>
+      <button type="submit" class="btn btn-primary mt-4">Create</button>
+    </form>
+
+    <hr>
+    <a th:href="@{/projects/list}">Back to projects list</a>
+  </div>
+</div>
+<div th:replace="fragments :: footer"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+

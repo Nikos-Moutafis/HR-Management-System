@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" type="text/css" href="/styles/fragments.css">
+  <link rel="stylesheet" type="text/css" href="/styles/universal.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <title>Save Employee</title>
+</head>
+<body>
+<div th:replace="fragments :: navbar"></div>
+
+<div class="container">
+
+  <h2>Employee insertion</h2>
+
+  <hr>
+
+  <p class="h4 mb-4">Save an Employee</p>
+  <p class="alert alert-danger mt-4" th:if="${errorMessage}">
+    <strong>Error:</strong> <span th:text="${errorMessage}"></span>
+  </p>
+
+  <form action="@{/employees/save}" th:action="@{/employees/save}"
+        th:object="${employeeForm}" method="post">
+
+    <input type="hidden" th:field="*{id}">
+    <div class="form-group">
+      <label for="firstname" th:if="${#fields.hasErrors('firstname')}" class="text-danger">First name*</label>
+      <input id="firstname" name="firstname" type="text" th:field="*{firstname}" class="form-control mb-4 w-25" placeholder="First name" th:required="required">
+      <p class="alert alert-danger" th:if="${#fields.hasErrors('firstname')}" th:errors="*{firstname}"></p>
+    </div>
+
+    <div class="form-group">
+      <label for="lastname" th:if="${#fields.hasErrors('lastname')}" class="text-danger">Last name*</label>
+      <input id="lastname" name="lastname" type="text" th:field="*{lastname}" class="form-control mb-4 w-25" placeholder="Last name" th:required="required">
+      <p class="alert alert-danger" th:if="${#fields.hasErrors('lastname')}" th:errors="*{lastname}"></p>
+    </div>
+
+    <div class="form-group">
+      <label for="jobTitle" th:if="${#fields.hasErrors('jobTitle')}" class="text-danger">Job Title*</label>
+      <input type="text" name="jobTitle" id="jobTitle" th:field="*{jobTitle}" class="form-control mb-4 w-25" placeholder="Job Title" th:required="required">
+      <p class="alert alert-danger" th:if="${#fields.hasErrors('jobTitle')}" th:errors="*{jobTitle}"></p>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group mb-4 w-25">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="salary-label">Salary</span>
+        </div>
+        <label for="salary" th:if="${#fields.hasErrors('salary')}" class="text-danger">Salary*</label>
+        <input type="number" name="salary" step="0.01" id="salary" th:field="*{salary}" class="form-control" placeholder="salary" min="0" th:required="required">
+        <p class="alert alert-danger" th:if="${#fields.hasErrors('salary')}" th:errors="*{salary}"></p>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-info col-2">Save</button>
+  </form>
+
+  <hr>
+  <a th:href="@{/employees/list}">Back to employees list</a>
+</div>
+
+<div th:replace="fragments :: footer"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
