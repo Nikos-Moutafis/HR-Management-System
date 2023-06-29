@@ -94,30 +94,41 @@
 						<span th:text="'Current employer: ' + ${employee.employer != null ? employee.employer.name : 'None'}"></span>
 					</div>
 
+					<div th:if="${employers.size()==0}" class="text-center mx-auto">
+						<p>There are no existing employers to add to employee, please create one employer first and return!
+							<a class="btn btn-primary btn-sm" th:href="@{/employers/addEmployer}">
+								Click Here to create an employer
+							</a> <br>
+							or click the <i> Add directly new employer to employee </i> button below
+								to assign him to a new employer directly!
+						</p>
+					</div>
 
-					<form  th:action="@{/employees/addExistingEmployer}" method="post" th:if="${employee.employer==null}">
-						<input type="hidden" name="employeeId" th:value="${employee.id}" />
-						<div class="form-group row">
-							<label for="employer" class="col-sm-3 col-form-label">Employers available:</label>
-							<div class="col-sm-9 w-50 mx-auto">
-								<select class="form-control" id="employer" name="employerId" required>
-									<option value="" selected>Choose an existing employer</option>
-									<option th:each="employer : ${employers}" th:value="${employer.id}" th:text="${employer.name}" />
-								</select>
-								<button type="submit" class="btn btn-info btn-sm mt-2">Add existing employer</button>
+					<div th:if="${employers.size()!=0}">
+						<form  th:action="@{/employees/addExistingEmployer}" method="post" th:if="${employee.employer==null}">
+							<input type="hidden" name="employeeId" th:value="${employee.id}" />
+							<div class="form-group row">
+								<label for="employer" class="col-sm-3 col-form-label">Employers available:</label>
+								<div class="col-sm-9 w-50 mx-auto">
+									<select class="form-control" id="employer" name="employerId" required>
+										<option value="" selected>Choose an existing employer</option>
+										<option th:each="employer : ${employers}" th:value="${employer.id}" th:text="${employer.name}"/>
+									</select>
+									<button type="submit" class="btn btn-info btn-sm mt-2">Add existing employer</button>
+								</div>
 							</div>
-						</div>
-					</form>
-
+						</form>
+					</div>
 					<div class="mx-auto mt-2">
 						<form th:action="@{/employees/showFormForEmployer}"  th:if="${employee.employer==null}">
 							<hr>
-							<small class="form-text  text-muted">If you don't see the employer you're looking for, you can create a new one.</small>
+							<small class="form-text  text-muted">If you don't see the employer you're looking for,
+								you can create a new one.</small>
 							<input type="hidden" name="employeeId" th:value="${employee.id}" />
 							<br>
 
 							<div class="d-flex justify-content-center">
-								<button type="submit" class="btn btn-info btn-sm">Add New employer</button>
+								<button type="submit" class="btn btn-info btn-sm">Add directly new employer to employee</button>
 							</div>
 						</form>
 					</div>

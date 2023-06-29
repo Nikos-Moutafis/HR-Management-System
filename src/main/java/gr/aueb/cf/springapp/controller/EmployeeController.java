@@ -239,7 +239,7 @@ public class EmployeeController {
 	 */
 
 	@GetMapping("/showFormForEmployer")
-	public String showFormForEmployer(@RequestParam("employeeId") Long employeeId, Model model) {
+	public String showFormForNewEmployer(@RequestParam("employeeId") Long employeeId, Model model) {
 		try {
 			Employee employee = employeeService.findById(employeeId);
 

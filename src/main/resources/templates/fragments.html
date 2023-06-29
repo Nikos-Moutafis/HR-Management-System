@@ -10,16 +10,21 @@
 <div th:fragment="navbar">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" th:href="@{/home}">Human Resources Management System</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
+
                 <li class="nav-item active">
                     <a class="nav-link" th:href="@{/home}">Home <span class="sr-only"></span></a>
                 </li>
+
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdownMenuLk" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdownMenuLk" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Employees
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -27,8 +32,10 @@
                         <a class="dropdown-item" th:href="@{/employees/showFormForAdd}">Add an employee</a>
                     </div>
                 </li>
+
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdownMenuLin" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdownMenuLin"
+                       role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Employers
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -36,6 +43,7 @@
                         <a class="dropdown-item" th:href="@{/employers/addEmployer}">Add Employer</a>
                     </div>
                 </li>
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Projects
@@ -46,6 +54,7 @@
                         <a class="dropdown-item" th:href="@{/projects/create}">Add a Project</a>
                     </div>
                 </li>
+
             </ul>
             <button class="btn btn-sm btn-warning logout-btn"><a  style="text-decoration: none" th:href="@{/logout}">Logout</a></button>
         </div>

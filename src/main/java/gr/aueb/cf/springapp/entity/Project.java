@@ -1,5 +1,7 @@
 package gr.aueb.cf.springapp.entity;
 
+import gr.aueb.cf.springapp.enums.Status;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
@@ -27,8 +29,9 @@ public class Project {
     @Column(name = "END_DATE")
     private String endDate;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "STATUS")
-    private String status;
+    private Status status;
 
     @ManyToOne(cascade = CascadeType.REMOVE, optional = false)
     @JoinColumn(name = "employer_id", nullable = false)
@@ -45,7 +48,7 @@ public class Project {
     }
 
     public Project(Long id, String name, String description, String startDate,
-                   String endDate, String status, Employer employer, List<Employee> employees) {
+                   String endDate, Status status, Employer employer, List<Employee> employees) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -129,11 +132,11 @@ public class Project {
         this.endDate = endDate;
     }
 
-    public String getStatus() {
+    public Status getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(Status status) {
         this.status = status;
     }
 

@@ -66,7 +66,7 @@ public class EmployerServiceImpl implements IEmployerService {
         if (employer == null) throw new EntityNotFoundException(Employer.class, employerDTO.getId());
         employer.setId(employerDTO.getId());
         employer.setName(employerDTO.getName());
-        employer.setAddress(employer.getAddress());
+        employer.setAddress(employerDTO.getAddress());
         employerRepository.save(employer);
         return employer;
     }

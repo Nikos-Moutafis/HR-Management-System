@@ -8,7 +8,60 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01f2d4d5-dcb4-44dd-af5c-5a5e25e98076" name="Changes" comment="refactor" />
+    <list default="true" id="01f2d4d5-dcb4-44dd-af5c-5a5e25e98076" name="Changes" comment="refactor">
+      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/gr/aueb/cf/springapp/controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/gr/aueb/cf/springapp/controller/EmployeeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/gr/aueb/cf/springapp/controller/ProjectController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/gr/aueb/cf/springapp/controller/ProjectController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/gr/aueb/cf/springapp/dto/ProjectDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/gr/aueb/cf/springapp/dto/ProjectDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/gr/aueb/cf/springapp/entity/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/gr/aueb/cf/springapp/entity/Employee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/gr/aueb/cf/springapp/entity/Project.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/gr/aueb/cf/springapp/entity/Project.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/gr/aueb/cf/springapp/service/impl/EmployerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/gr/aueb/cf/springapp/service/impl/EmployerServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/gr/aueb/cf/springapp/service/impl/ProjectServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/gr/aueb/cf/springapp/service/impl/ProjectServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/gr/aueb/cf/springapp/validator/ProjectValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/gr/aueb/cf/springapp/validator/ProjectValidator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/employees/employees-table.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/employees/employees-table.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/employees/employer-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/employees/employer-form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/employers/employers-table.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/employers/employers-table.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/CustomAuthenticationProvider.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/EmployeeController.class.uniqueId6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/EmployeeRepository.class.uniqueId11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/EmployeeServiceImpl.class.uniqueId4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/EmployerController.class.uniqueId3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/EmployerServiceImpl.class.uniqueId7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ProjectController.class.uniqueId9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ProjectRepository.class.uniqueId10" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ProjectServiceImpl.class.uniqueId12" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ProjectValidator.class.uniqueId2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/RegisterController.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/SecurityConfig.class.uniqueId5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/UserValidator.class.uniqueId8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logfile.log" beforeDir="false" afterPath="$PROJECT_DIR$/logfile.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/aueb/cf/springapp/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gr/aueb/cf/springapp/controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/aueb/cf/springapp/dto/ProjectDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gr/aueb/cf/springapp/dto/ProjectDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/aueb/cf/springapp/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gr/aueb/cf/springapp/entity/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/aueb/cf/springapp/entity/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gr/aueb/cf/springapp/entity/Project.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/aueb/cf/springapp/service/impl/EmployerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gr/aueb/cf/springapp/service/impl/EmployerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/aueb/cf/springapp/validator/ProjectValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gr/aueb/cf/springapp/validator/ProjectValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/employees/employees-table.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/employees/employees-table.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/employees/employer-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/employees/employer-form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/employers/employers-table.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/employers/employers-table.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/employers/update-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/employers/update-form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects/assign-projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects/assign-projects.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects/create-projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects/create-projects.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projects/projects-table.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/projects/projects-table.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/register.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,11 +127,12 @@
         <option value="HTML File" />
         <option value="CSS File" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -99,35 +153,35 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelOrder2": "2",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RequestMappingsPanelWidth2": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "extract.method.default.visibility": "private",
-    "last_opened_file_path": "C:/Users/nikos/dev-spring-boot/spring-thymeleaf",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "spring.configuration.checksum": "01f6ca2b6fb59a7a719abcf58086ce03",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelOrder2&quot;: &quot;2&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth2&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/nikos/dev-spring-boot/spring-thymeleaf&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;01f6ca2b6fb59a7a719abcf58086ce03&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\nikos\dev-spring-boot\08-spring-boot-spring-mvc-crud\spring-thymeleaf-rest\src\main\resources\static\styles" />
@@ -436,7 +490,13 @@
       <workItem from="1687261534429" duration="6071000" />
       <workItem from="1687277996019" duration="15017000" />
       <workItem from="1687451123907" duration="5986000" />
-      <workItem from="1687457907245" duration="33000" />
+      <workItem from="1687457907245" duration="3039000" />
+      <workItem from="1687478112512" duration="2983000" />
+      <workItem from="1687987601314" duration="480000" />
+      <workItem from="1687988095627" duration="46000" />
+      <workItem from="1687988190875" duration="844000" />
+      <workItem from="1688048968762" duration="11254000" />
+      <workItem from="1688070399457" duration="3472000" />
     </task>
     <task id="LOCAL-00050" summary="YOU CHANGED VALIDATION CHECK IT AND SEE IF IT WORKS, YOU MADE CHANGES TO ENTITIES CHECK FOR THOSE TOO/many to many delete fixed, now check VALIDATION for all,check data consistency, check if full  crud supported and assign-unassign from projects or employer, also full crud for all entities,fix security,create other rest controllers,add some style,implement User service,use modals in everything that a change happens">
       <created>1683916910724</created>

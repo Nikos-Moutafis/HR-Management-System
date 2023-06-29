@@ -1,6 +1,7 @@
 package gr.aueb.cf.springapp.validator;
 
 import gr.aueb.cf.springapp.dto.ProjectDTO;
+import gr.aueb.cf.springapp.enums.Status;
 import gr.aueb.cf.springapp.service.IProjectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -69,7 +70,7 @@ public class ProjectValidator implements Validator {
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "employer", "employerRequired");
 
         ValidationUtils.rejectIfEmptyOrWhitespace(errors , "status", "validStatus");
-        if (projectDTO.getStatus()== null || !projectDTO.getStatus().equals("ACTIVE") && (!projectDTO.getStatus().equals("INACTIVE"))){
+        if (projectDTO.getStatus()== null || (projectDTO.getStatus() != Status.ACTIVE) && (projectDTO.getStatus() != Status.INACTIVE)){
             errors.rejectValue("status","validStatus");
         }
 

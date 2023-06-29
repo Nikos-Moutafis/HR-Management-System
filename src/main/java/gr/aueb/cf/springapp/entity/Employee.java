@@ -27,7 +27,6 @@ public class Employee {
 	@Column(name = "SALARY")
 	private Double salary;
 
-
 	@ManyToOne(cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "EMPLOYER_ID", referencedColumnName = "ID")
 	private Employer employer;

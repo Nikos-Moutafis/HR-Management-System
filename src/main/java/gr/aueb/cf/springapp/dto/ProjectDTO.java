@@ -2,6 +2,7 @@ package gr.aueb.cf.springapp.dto;
 
 import gr.aueb.cf.springapp.entity.Employee;
 import gr.aueb.cf.springapp.entity.Employer;
+import gr.aueb.cf.springapp.enums.Status;
 
 import javax.validation.constraints.NotNull;
 import java.util.List;
@@ -20,7 +21,7 @@ public class ProjectDTO {
     @NotNull(message = "Start date must not be null")
     private String endDate;
 
-    private String status;
+    private Status status;
 
     @NotNull
     private Employer employer;
@@ -31,7 +32,7 @@ public class ProjectDTO {
     }
 
     public ProjectDTO(Long id, String name, String description, String startDate,
-                      String endDate, String status, Employer employer, List<Employee> employeeList) {
+                      String endDate, Status status, Employer employer, List<Employee> employeeList) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -95,11 +96,11 @@ public class ProjectDTO {
         this.endDate = endDate;
     }
 
-    public String getStatus() {
+    public Status getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(Status status) {
         this.status = status;
     }
 
