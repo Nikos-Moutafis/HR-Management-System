@@ -28,12 +28,10 @@
 </p>
 
 <div th:if="${employers.size() != 0}">
-
   <div class="container">
     <h2>Project insertion</h2>
     <hr>
     <p class="h4 mb-4">Save a Project</p>
-
     <form th:action="@{/projects/create}" th:object="${projectForm}" method="post" class="col-md-6 mx-auto">
       <div class="form-group">
         <label for="name">Name:</label>

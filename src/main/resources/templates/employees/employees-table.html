@@ -122,11 +122,12 @@
 					<div class="mx-auto mt-2">
 						<form th:action="@{/employees/showFormForEmployer}"  th:if="${employee.employer==null}">
 							<hr>
-							<small class="form-text  text-muted">If you don't see the employer you're looking for,
-								you can create a new one.</small>
+							<small class="form-text  text-muted">
+								If you don't see the employer you're looking for,
+								you can create a new one.
+							</small>
 							<input type="hidden" name="employeeId" th:value="${employee.id}" />
 							<br>
-
 							<div class="d-flex justify-content-center">
 								<button type="submit" class="btn btn-info btn-sm">Add directly new employer to employee</button>
 							</div>
