@@ -1,6 +1,7 @@
 package gr.aueb.cf.springapp.authentication;
 
 import gr.aueb.cf.springapp.dao.UserRepository;
+import gr.aueb.cf.springapp.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.context.support.MessageSourceAccessor;
@@ -10,6 +11,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
@@ -45,7 +47,8 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
     /**
      * This method is responsible for authenticating users.
      * It receives an Authentication object, retrieves the username and password from it,
-     * then validates these credentials against the UserRepository.
+     * then validates these credentials against the UserRepository. It compares hashed password
+     * stored in database versus the password user has provided after it encodes it with bcrypt.
      * If the credentials are valid, it creates a new UsernamePasswordAuthenticationToken and returns it.
      * If the credentials are invalid, it throws a BadCredentialsException.
      *
@@ -56,13 +59,17 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
         String username = authentication.getName();
-        String password = authentication.getCredentials().toString();
+        String providedPassword = authentication.getCredentials().toString();
 
-        if (!userRepository.isUserValid(username,password)){
+        User user = userRepository.findByUsernameEquals(username);
+        if (user == null) {
             throw new BadCredentialsException(accessor.getMessage("badCredentials"));
         }
-
-        return new UsernamePasswordAuthenticationToken(username, password, Collections.<GrantedAuthority>emptyList());
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+        if (!passwordEncoder.matches(providedPassword, user.getPassword())) {
+            throw new BadCredentialsException(accessor.getMessage("badCredentials"));
+        }
+        return new UsernamePasswordAuthenticationToken(username, user.getPassword(), Collections.<GrantedAuthority>emptyList());
     }
 
     /**

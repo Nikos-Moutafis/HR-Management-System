@@ -6,6 +6,7 @@ import gr.aueb.cf.springapp.entity.User;
 import gr.aueb.cf.springapp.service.IUserService;
 import gr.aueb.cf.springapp.service.exceptions.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -23,14 +24,19 @@ public class UserServiceImpl implements IUserService {
     }
 
     /**
-     * Registers a new user based on the provided UserDTO.
+     * Registers a new user based on the provided UserDTO and hashes the password
+     * using BCrypt.
      * @param userToRegister the UserDTO containing user registration data
      * @return the registered User entity
      */
     @Override
     public User registerUser(UserDTO userToRegister) {
-        User user = userRepository.save(mapUser(userToRegister));
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+        String hashedPassword = passwordEncoder.encode(userToRegister.getPassword());
 
+        userToRegister.setPassword(hashedPassword);
+
+        User user = userRepository.save(mapUser(userToRegister));
         return user;
     }
 

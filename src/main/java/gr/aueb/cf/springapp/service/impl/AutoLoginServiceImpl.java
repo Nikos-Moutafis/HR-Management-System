@@ -20,9 +20,9 @@ public class AutoLoginServiceImpl implements IAutoLoginService {
     }
 
     @Override
-    public void autoLogin(User user) {
+    public void autoLogin(User user, String rawPassword) {
         UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(
-                user.getUsername(),user.getPassword(), Collections.emptyList());
+                user.getUsername(), rawPassword, Collections.emptyList());
 
         authenticationManager.authenticate(usernamePasswordAuthenticationToken);
 

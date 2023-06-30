@@ -59,8 +59,10 @@ public class RegisterController {
             return "register";
         }
 
+        String rawPassword = userDTO.getPassword();
         User user = userService.registerUser(userDTO);
-        autoLoginService.autoLogin(user);
+
+        autoLoginService.autoLogin(user, rawPassword);
         return "redirect:/employees/list";
     }
 }

@@ -9,15 +9,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01f2d4d5-dcb4-44dd-af5c-5a5e25e98076" name="Changes" comment="refactor">
+      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/employers/update-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/employers/update-form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/gr/aueb/cf/springapp/authentication/CustomAuthenticationProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/gr/aueb/cf/springapp/authentication/CustomAuthenticationProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/gr/aueb/cf/springapp/controller/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/gr/aueb/cf/springapp/controller/RegisterController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/gr/aueb/cf/springapp/service/IAutoLoginService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/gr/aueb/cf/springapp/service/IAutoLoginService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/gr/aueb/cf/springapp/service/impl/AutoLoginServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/gr/aueb/cf/springapp/service/impl/AutoLoginServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/gr/aueb/cf/springapp/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/gr/aueb/cf/springapp/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/employees/employees-table.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/employees/employees-table.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/templates/fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/fragments.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/templates/home-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/home-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/projects/assign-projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/projects/assign-projects.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/projects/create-projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/projects/create-projects.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/projects/projects-table.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/projects/projects-table.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/employees/employees-table.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/employees/employees-table.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/EmployeeController.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logfile.log" beforeDir="false" afterPath="$PROJECT_DIR$/logfile.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/aueb/cf/springapp/authentication/CustomAuthenticationProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gr/aueb/cf/springapp/authentication/CustomAuthenticationProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/aueb/cf/springapp/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gr/aueb/cf/springapp/controller/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/aueb/cf/springapp/service/IAutoLoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gr/aueb/cf/springapp/service/IAutoLoginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/aueb/cf/springapp/service/impl/AutoLoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gr/aueb/cf/springapp/service/impl/AutoLoginServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/aueb/cf/springapp/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gr/aueb/cf/springapp/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home-page.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -453,14 +471,7 @@
       <workItem from="1687988095627" duration="46000" />
       <workItem from="1687988190875" duration="844000" />
       <workItem from="1688048968762" duration="11254000" />
-      <workItem from="1688070399457" duration="4145000" />
-    </task>
-    <task id="LOCAL-00051" summary="YOU CHANGED VALIDATION CHECK IT AND SEE IF IT WORKS, YOU MADE CHANGES TO ENTITIES CHECK FOR THOSE TOO/many to many delete fixed, now check VALIDATION for all,check data consistency, check if full  crud supported and assign-unassign from projects or employer, also full crud for all entities,fix security,create other rest controllers,add some style,implement User service,use modals in everything that a change happens">
-      <created>1684003062053</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1684003062053</updated>
+      <workItem from="1688070399457" duration="9537000" />
     </task>
     <task id="LOCAL-00052" summary="addded dtos for create entities">
       <created>1684424177041</created>
@@ -798,7 +809,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688074382864</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="refactor">
+      <created>1688075009477</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1688075009477</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
