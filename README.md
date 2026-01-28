@@ -1,4 +1,4 @@
-## The final project for Coding Factory by AUEB
+## The final project for Coding Factory by Athens University of Economics and Business, Coding Factory 3 
 - ### This projects allows users to register themselves and manage employees, employers,projects and all relationships between them in a clear way 
 
 - In this application you can create employees, employers and projects. You can also update or delete them. **Now the most interesting feature in this app is that  you can manage the relationships between all of them.** You can
